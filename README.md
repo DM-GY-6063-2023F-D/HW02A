@@ -1,64 +1,21 @@
-# p5.js Template
+# HW02A
 
-This is a README file that can be used to describe and document your assignment.
+Recreation of three prints by Lygia Clark.
 
-Markdown Cheatsheet (from [https://www.markdownguide.org/cheat-sheet/](https://www.markdownguide.org/cheat-sheet/)):
+## HW02A01
 
----
----
+This is made of 2 triangles, 2 lines and a quad for the rotated square. I estimated the triangles to be about 1/3 of the height of the painting, and their length was initially estimated to be about 1/2 of the painting width. I knew it wasn't 1/2, so the exact location of those points was determined later in the code.
 
-# Heading1
-## Heading2
-### Heading3
-#### Heading4
-##### Heading5
-###### Heading6
+![](./imgs/HW02A01.jpg)
 
-**bold text**
+## HW02A02
 
-*italicized text*
+This was the hardest for me. I saved the image and used photoshop to get some rough estimates of the points marked in my drawing below. In the end I used 2 quads and 4 lines. Since the top and bottom of the painting are mirrored versions of each other, any point (X,Y) used in the top part corresponds to point (W-X, H-Y) in the bottom part, where W,H are the width and height of the painting.
 
-~~strikethrough text~~
+![](./imgs/HW02A02.jpg)
 
-> blockquote 1 level
->> blockquote 2 levels
->>> blockquote 3 levels
+## HW02A03
 
-Ordered List:
-1. First item
-2. Second item
-3. Third item
+This was the most fun because there were no quads and all the points could be estimated by just looking at the original image. I initially drew it using 2 rectangles and 4 triangles, but noticed a simpler way to do it just involved 2 rectangles and 2 triangles. Like in the other paintings, the top and bottom parts are the same, but mirrored over the line Y = X, so any point (X,Y) in the top part has a corresponding (W-X, H-Y) in the bottom part.
 
-Unordered List:
-- First item
-- Second item
-- Third item
-
-`short code block`
-
-```
-extended code block
-fun() {
-  return 0
-}
-```
-
-Link:  
-[linked text](https://www.example.com)
-
-
-Image with url:  
-![image description](https://dm-gy-6063-2023f-d.github.io/assets/homework/02/clark-espaco-modulado-00.jpg)
-
-
-Image on repo:  
-![image description](./file-name.jpg)
-
-
-To start a new line, add two spaces at the end of a line, like this:  
-this is a new line.
-
-
-To start a new paragraph, leave an empty line between two lines of text.
-
-This is a new paragraph.
+![](./imgs/HW02A03.jpg)
