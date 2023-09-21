@@ -12,43 +12,34 @@ function draw() {
   // painting background
   translate(20, 20);
   stroke(0);
+  strokeWeight(1);
   fill("#f7e5ca");
   rect(0, 0, paintingSize, paintingSize);
 
-  strokeWeight(1.5);
   fill(0);
+  stroke(0);
 
-  // top part of the painting
-  quad(
-    0.6 * paintingSize, 0,
-    0.85 * paintingSize, 0.15 * paintingSize,
-    0.6 * paintingSize, 0.3 * paintingSize,
-    0.35 * paintingSize, 0.15 * paintingSize
-  );
-
-  line(
-    0.6 * paintingSize, 0,
-    0.15 * paintingSize, 0.27 * paintingSize
-  );
-  line(
+  // top left triangle
+  triangle(
     0, 0,
-    0.15 * paintingSize, 0.27 * paintingSize
+    0, 0.333 * paintingSize,
+    triangleTip, 0.333 * paintingSize
   );
+  line(0, paintingSize, triangleTip, 0.333 * paintingSize);
 
-  // bottom part of the painting
-  quad(
-    paintingSize - 0.6 * paintingSize, paintingSize - 0,
-    paintingSize - 0.85 * paintingSize, paintingSize - 0.15 * paintingSize,
-    paintingSize - 0.6 * paintingSize, paintingSize - 0.3 * paintingSize,
-    paintingSize - 0.35 * paintingSize, paintingSize - 0.15 * paintingSize
-  );
-
-  line(
-    paintingSize - 0.6 * paintingSize, paintingSize,
-    paintingSize - 0.15 * paintingSize, paintingSize - 0.27 * paintingSize
-  );
-  line(
+  // bottom right triangle
+  triangle(
     paintingSize, paintingSize,
-    paintingSize - 0.15 * paintingSize, paintingSize - 0.27 * paintingSize
+    paintingSize, 0.666 * paintingSize,
+    paintingSize - triangleTip, 0.666 * paintingSize
+  );
+  line(paintingSize, 0, paintingSize-triangleTip, 0.666 * paintingSize);
+
+  // center "square"
+  quad(
+    triangleTip, 0.333 * paintingSize,
+    0.333 * paintingSize, paintingSize - triangleTip,
+    paintingSize - triangleTip, 0.666 * paintingSize,
+    0.666 * paintingSize, triangleTip
   );
 }

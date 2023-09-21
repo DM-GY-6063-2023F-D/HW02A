@@ -12,25 +12,43 @@ function draw() {
   // painting background
   translate(20, 20);
   stroke(0);
-  strokeWeight(1);
   fill("#f7e5ca");
   rect(0, 0, paintingSize, paintingSize);
 
+  strokeWeight(1.5);
   fill(0);
 
-  // top shapes
-  rect(0, paintingSize / 2, paintingSize / 2, paintingSize / 2);
-  triangle(
-    paintingSize / 2, paintingSize / 2,
-    paintingSize - trapezePoint, paintingSize / 2,
-    paintingSize / 2, paintingSize
+  // top part of the painting
+  quad(
+    0.6 * paintingSize, 0,
+    0.85 * paintingSize, 0.15 * paintingSize,
+    0.6 * paintingSize, 0.3 * paintingSize,
+    0.35 * paintingSize, 0.15 * paintingSize
   );
 
-  // bottom shapes
-  rect(paintingSize / 2, 0, paintingSize / 2, paintingSize / 2);
-  triangle(
-    paintingSize / 2, 0,
-    paintingSize / 2, paintingSize / 2,
-    trapezePoint, paintingSize / 2,
+  line(
+    0.6 * paintingSize, 0,
+    0.15 * paintingSize, 0.27 * paintingSize
+  );
+  line(
+    0, 0,
+    0.15 * paintingSize, 0.27 * paintingSize
+  );
+
+  // bottom part of the painting
+  quad(
+    paintingSize - 0.6 * paintingSize, paintingSize - 0,
+    paintingSize - 0.85 * paintingSize, paintingSize - 0.15 * paintingSize,
+    paintingSize - 0.6 * paintingSize, paintingSize - 0.3 * paintingSize,
+    paintingSize - 0.35 * paintingSize, paintingSize - 0.15 * paintingSize
+  );
+
+  line(
+    paintingSize - 0.6 * paintingSize, paintingSize,
+    paintingSize - 0.15 * paintingSize, paintingSize - 0.27 * paintingSize
+  );
+  line(
+    paintingSize, paintingSize,
+    paintingSize - 0.15 * paintingSize, paintingSize - 0.27 * paintingSize
   );
 }
